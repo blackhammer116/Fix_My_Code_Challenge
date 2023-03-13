@@ -4,6 +4,8 @@
     
     The size of the square must be the first argument 
     of the program.
+	
+	** the error was in the size and loop
 */
 
 
@@ -14,10 +16,10 @@ if (process.argv.length <= 2) {
     process.exit(1)
 }
 
-size = parseInt(process.argv[2], 16)
+size = parseInt(process.argv[2], process.argv[1])
 
 for (let i = 0 ; i < size ; i ++) {
-    for (let j = 0 ; j < i ; j ++) {
+    for (let j = 0 ; j < size ; j ++) {
         process.stdout.write("#");
     }
     process.stdout.write("\n");
